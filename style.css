@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.instances {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: fit-content; /* Ensure the container resizes to fit its content */
+    height: fit-content; /* Ensure the container resizes to fit its content */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.instance {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 40px); /* Double the width of the counter */
+    box-sizing: border-box;
+    resize: both;
+    overflow: auto;
+    transition: transform 0.3s;
+}
+
+.instance:hover {
+    transform: scale(1.05);
+}
+
+.instance label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.instance table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.instance table, .instance th, .instance td {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.instance td input[type="text"], .instance td input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.instance .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.instance .theme-menu {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.instance .theme-menu select {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.instance .hover-box {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border: 1px solid #000;
+    padding: 5px;
+    z-index: 100;
+}
+
+.notes {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    word-wrap: break-word; /* Allow word wrap in the notes field */
+    height: 100px; /* Adjust height as needed */
+    resize: vertical; /* Allow the textarea to be resizable vertically */
+    box-sizing: border-box; /* Ensure padding is included in the element's width and height */
+}
